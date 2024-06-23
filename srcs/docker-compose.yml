@@ -1,4 +1,4 @@
-version : '3.7'
+version: '3.7'
 
 networks:
   my_network:
@@ -20,13 +20,6 @@ volumes:
       type: none
       device: ./volumes/frontend
       o: bind
-  database:
-    name: database
-    driver: local
-    driver_opts:
-      type: none
-      device: ./volumes/database
-      o: bind
 
 services:
   backend:
@@ -39,8 +32,6 @@ services:
       - my_network
     ports:
       - "8080:8080"
-    depends_on:
-      - database
     restart: unless-stopped
   frontend:
     container_name: frontend
@@ -51,18 +42,8 @@ services:
     networks:
       - my_network
     ports:
-      - "3000:3000"
+      - "80:80"
+      - "443:443"
     depends_on:
       - backend
-    restart: unless-stopped
-  database:
-    container_name: database
-    image: mysql:5.7
-    env_file: .env
-    volumes:
-      - database:/var/lib/mysql
-    networks:
-      - my_network
-    ports:
-      - "3306:3306"
     restart: unless-stopped

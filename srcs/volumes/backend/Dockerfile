@@ -13,12 +13,12 @@ EXPOSE 8000
 WORKDIR /app
 
 # Install dependencies
-COPY ./requirements.txt /app/requirements.txt
+COPY ./helper.txt /app/requirements.txt
 
 RUN apt-get update && \
     apt-get install -y postgresql-client && \
     pip install --upgrade pip && \
-    pip install -no-cache-dir -r /app/requirements.txt
+    pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy project
 COPY . /app
