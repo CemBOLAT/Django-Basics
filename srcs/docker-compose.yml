@@ -1,0 +1,68 @@
+version : '3.7'
+
+networks:
+  my_network:
+    name: my_network
+    driver: bridge
+
+volumes:
+  backend:
+    name: backend
+    driver: local
+    driver_opts:
+      type: none
+      device: ./volumes/backend
+      o: bind
+  frontend:
+    name: frontend
+    driver: local
+    driver_opts:
+      type: none
+      device: ./volumes/frontend
+      o: bind
+  database:
+    name: database
+    driver: local
+    driver_opts:
+      type: none
+      device: ./volumes/database
+      o: bind
+
+services:
+  backend:
+    container_name: backend
+    build: ./volumes/backend
+    env_file: .env
+    volumes:
+      - backend:/app
+    networks:
+      - my_network
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    restart: unless-stopped
+  frontend:
+    container_name: frontend
+    build: ./volumes/frontend
+    env_file: .env
+    volumes:
+      - frontend:/app
+    networks:
+      - my_network
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+  database:
+    container_name: database
+    image: mysql:5.7
+    env_file: .env
+    volumes:
+      - database:/var/lib/mysql
+    networks:
+      - my_network
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
