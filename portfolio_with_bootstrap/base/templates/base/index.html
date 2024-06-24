@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/styles.scss' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('portfolio')">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('certificates')">Certificates</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="container mt-4">
+            <section id="home">
+                <h1 class="display-4">Welcome to My Portfolio</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>About Me</h2>
+                        <p>Hi, I'm Cemal BOLAT. I'm a passionate Student from Gebze Technical University and Ecole 42 Kocaeli.</p>
+                        <p>Programming has consistently ignited a passion within me, and I am exhilarated by the prospect of transforming my conceptualizations into tangible realities. I am a quick learner and a team player, and I am always eager to learn new things. I am proficient in C, C++, Java, C# and Python.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Contact Me</h2>
+                        <p>If you have any questions or want to get in touch, feel free to contact me via email or phone.</p>
+                        <p>Email: <a href="mailto:cemalbolat2003@outlook.com">cemalbolat2003@outlook.com</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/cemal-bolat-a5188721b">Cemal BOLAT</a></p>
+                        <p>GitHub: <a href="https://www.github.com/CemBOLAT">CemBOLAT</a></p>
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio" style="display:none;">
+                <h1 class="display-4">Portfolio</h1>
+                <p>Here are some of the projects I have worked on.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="{% static 'images/project1.jpg' %}" alt="Project 1 Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Minishell</h5>
+                                <p class="card-text">A program works like bash terminal.</p>
+                                <a href="https://github.com/CemBOLAT/Minishell" target="_blank" class="btn btn-primary">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="{% static 'images/project2.png' %}" alt="Project 2 Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Cube3D</h5>
+                                <p class="card-text">Three-dimensional graphic program by creating a game engine using the ray-casting technique.</p>
+                                <a href="https://github.com/CemBOLAT/cub3d" target="_blank" class="btn btn-primary">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="{% static 'images/project3.png' %}" alt="Project 3 Image">
+                            <div class="card-body">
+                                <h5 class="card-title">IRC Server</h5>
+                                <p class="card-text">IRC is a project inspired by the RFC1459 protocol, aimed at implementing a basic Internet Relay Chat (IRC) server and client.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="{% static 'images/project4.png' %}" alt="Project 4 Image">
+                            <div class="card-body">
+                                <h5 class="card-title">AGENT 152</h5>
+                                <p class="card-text">A 2D Platform game that we have developed with my team for a GameJam. Developed in Unity.</p>
+                                <a href="https://ahmetbahacepni.itch.io/agent152" target="_blank" class="btn btn-primary">View on itch.io</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="{% static 'images/project5.png' %}" alt="Project 5 Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Scene Matcher</h5>
+                                <p class="card-text">A 3D program that controls the similarity of scenes. Developed in Unity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="{% static 'images/project6.jpg' %}" alt="Project 6 Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Inception</h5>
+                                <p class="card-text">A Docker-Compose project that creates a full web server environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="{% static 'images/project7.png' %}" alt="Project 7 Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Wordle Clone</h5>
+                                <p class="card-text">A clone of the popular game Wordle. Developed in HTML, CSS and JavaScript.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="certificates" style="display:none;">
+                <h1 class="display-4">Certificates</h1>
+                <div class="accordion" id="certificatesAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    System Administration
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#certificatesAccordion">
+                            <div class="card-body">
+                                <div class="media">
+                                    <img src="https://kayit.linux.org.tr/media/2023/certs/e12188172c7703317aa1016edf2bccdd99124eed0ba7baf1143e4000e03eee77.png" class="mr-3" width="300" height="200" alt="Certificate 1 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Özgür Yazılım Kampı / GNU/Linux 101</h5>
+                                        Özgür Yazılım Kampı / GNU/Linux 101 is an 8-day intensive bootcamp that teaches the basics of GNU/Linux.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Free Code Camp
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#certificatesAccordion">
+                            <div class="card-body">
+                                <div class="media">
+                                    <img src="{% static 'certificates/JavaScriptAlgo.png' %}" class="mr-3" width="300" height="200" alt="Certificate 2 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">JavaScript Algorithms and Data Structures</h5>
+                                        JavaScript Algorithms and Data Structures is a certification that proves the knowledge of JavaScript.
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <img src="{% static 'certificates/WebDesign.png' %}" class="mr-3" width="300" height="200" alt="Certificate 3 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Responsive Web Design</h5>
+                                        Responsive Web Design is a certification that proves the knowledge of HTML and CSS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    HackerRank
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#certificatesAccordion">
+                            <div class="card-body">
+                                <div class="media">
+                                    <img src="{% static 'certificates/ProblemSolvingBasic.png' %}" class="mr-3" width="300" height="200" alt="Certificate 4 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Problem Solving (Basic)</h5>
+                                        Problem Solving (Basic) is a certification that proves the knowledge of basic problem solving.
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <img src="{% static 'certificates/JavaBasic.png' %}" class="mr-3" width="300" height="200" alt="Certificate 5 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Java (Basic)</h5>
+                                        Java (Basic) is a certification that proves the knowledge of basic Java.
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <img src="{% static 'certificates/PythonBasic.png' %}" class="mr-3" width="300" height="200" alt="Certificate 6 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Python (Basic)</h5>
+                                        Python (Basic) is a certification that proves the knowledge of basic Python.
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <img src="{% static 'certificates/CSharpBasic.png' %}" class="mr-3" width="300" height="200" alt="Certificate 7 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">C# (Basic)</h5>
+                                        C# (Basic) is a certification that proves the knowledge of basic C#.
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <img src="{% static 'certificates/CSSBasic.png' %}" class="mr-3" width="300" height="200" alt="Certificate 8 Image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">CSS (Basic)</h5>
+                                        CSS (Basic) is a certification that proves the knowledge of basic CSS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-light text-center py-3">
+            <p>&copy; 2024 by Cemal BOLAT</p>
+        </footer>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            function showSection(sectionId) {
+                const sections = document.querySelectorAll('main > section');
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

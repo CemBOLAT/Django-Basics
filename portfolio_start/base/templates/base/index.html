@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
+                    <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <h1>Welcome to My Portfolio</h1>
+                <div class="home-sections">
+                    <section>
+                        <h1>About Me</h1>
+                        <p>Hi, I'm Cemal BOLAT. I'm a passionate Student from Gebze Technical University and Ecole 42 Kocaeli. </p>
+                        <p>Programming has consistently ignited a passion within me, and I am exhilarated by the prospect of transforming my
+                            conceptualizations into tangible realities. I am a quick learner and a team player,
+                            and I am always eager to learn new things. I am proficient in C, C++, Java, C# and
+                            Python.
+                            </p>
+                    </section>
+                    <section>
+                        <h1>Contact Me</h1>
+                        <p>If you have any questions or want to get in touch, feel free to contact me via email or phone.</p>
+                        <p>Email: <a href="mailto:cemalbolat2003@outlook.com">cemalbolat2003@outlook.com</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/cemal-bolat-a5188721b">Cemal BOLAT</a></p>
+                        <p>GitHub: <a href="https://www.github.com/CemBOLAT">CemBOLAT</a></p>
+                    </section>
+                </div>
+            </section>
+            <section id="portfolio" style="display:none;">
+                <h1>Portfolio</h1>
+                <p>Here are some of the projects I have worked on.</p>
+                <ul>
+                    <li class="project">
+                        <h2>Minishell</h2>
+                        <img src="{% static 'images/project1.jpg' %}" width="300" height="200" alt="Project 1 Image">
+                        <p>A program works like bash terminal.</p>
+                        <a href="https://github.com/CemBOLAT/Minishell" target="_blank">View on GitHub</a>
+                    </li>
+                    <li class="project">
+                        <h2>Cube3D</h2>
+                        <img src="{% static 'images/project2.png' %}" width="300" height="200" alt="Project 2 Image">
+                        <p>Three-dimensional graphic program by creating a game engine using the ray-casting technique.</p>
+                        <a href="https://github.com/CemBOLAT/cub3d" target="_blank">View on GitHub</a>
+                    </li>
+                    <li class="project">
+                        <h2>IRC Server</h2>
+                        <img src="{% static 'images/project3.png' %}" width="300" height="200" alt="Project 3 Image">
+                        <p>IRC is a project inspired by the RFC1459 protocol, aimed at implementing a basic Internet Relay Chat (IRC) server and client.</p>
+                    </li>
+                    <li class="project">
+                        <h2>AGENT 152</h2>
+                        <img src="{% static 'images/project4.png' %}" alt="Project 4 Image" width="300" height="200">
+                        <p>A 2d Platform game that we have developed with my team for a GameJam. Developed in Unity.</p>
+                        <a href="https://ahmetbahacepni.itch.io/agent152" target="_blank">View on itch.io</a>
+                    </li>
+                    <li class="project">
+                        <h2>Scene Matcher</h2>
+                        <img src="{% static 'images/project5.png' %}" alt="Project 5 Image" width="300" height="200">
+                        <p>A 3d program that controls the similarity of scenes. Developed in Unity.</p>
+                    </li>
+                    <li class="project">
+                        <h2>Inception</h2>
+                        <img src="{% static 'images/project6.jpg' %}" width="300" height="200" alt="Project 6 Image">
+                        <p>A Docker-Compose project that creates a full web server environment.</p>
+                    </li>
+                    <li class="project">
+                        <h2>Wordle Clone</h2>
+                        <img src="{% static 'images/project7.png' %}" alt="Project 7 Image" width="300" height="200">
+                        <p>A clone of the popular game Wordle. Developed in Html, Css and Javascript.</p>
+                    </li>
+                </ul>
+            </section>
+            <section id="certificates" style="display:none;">
+                <h1>Certificates</h1>
+                <ul>
+                    <h1>System Administration</h1>
+                    <ul>
+                        <li class="certificate">
+                            <h2>Özgür Yazılım Kampı / GNU/Linux 101</h2>
+                            <img src="https://kayit.linux.org.tr/media/2023/certs/e12188172c7703317aa1016edf2bccdd99124eed0ba7baf1143e4000e03eee77.png" width="300" height="200" alt="Certificate 1 Image">
+                            <p>Özgür Yazılım Kampı / GNU/Linux 101 is a 8-days intensive bootcamp that teaches the basics of GNU/Linux.</p>
+                        </li>
+                    </ul>
+                    <h1>Free Code Camp</h1>
+                    <ul>
+                        <li class="certificate">
+                            <h2>Javascript Algorithms and Data Structures</h2>
+                            <img src="{% static 'certificates/JavaScriptAlgo.png' %}" width="300" height="200" alt="Certificate 2 Image">
+                            <p>Javascript Algorithms and Data Structures is a certification that proves the knowledge of Javascript.</p>
+                        </li>
+                        <li class="certificate">
+                            <h2>Responsive Web Design</h2>
+                            <img src="{% static 'certificates/WebDesign.png' %}" width="300" height="200" alt="Certificate 3 Image">
+                            <p>Responsive Web Design is a certification that proves the knowledge of Html and Css.</p>
+                        </li>
+                    </ul>
+                    <h1>HackerRank</h1>
+                    <ul>
+                        <li class="certificate">
+                            <h2>Problem Solving (Basic)</h2>
+                            <img src="{% static 'certificates/ProblemSolvingBasic.png' %}" width="300" height="200" alt="Certificate 4 Image">
+                            <p>Problem Solving (Basic) is a certification that proves the knowledge of basic problem solving.</p>
+                        </li>
+                        <li class="certificate">
+                            <h2>Java (Basic)</h2>
+                            <img src="{% static 'certificates/JavaBasic.png' %}" width="300" height="200" alt="Certificate 5 Image">
+                            <p>Java (Basic) is a certification that proves the knowledge of basic Java.</p>
+                        </li>
+                        <li class="certificate">
+                            <h2>Python (Basic)</h2>
+                            <img src="{% static 'certificates/PythonBasic.png' %}" width="300" height="200" alt="Certificate 6 Image">
+                            <p>Python (Basic) is a certification that proves the knowledge of basic Python.</p>
+                        </li>
+                        <li class="certificate">
+                            <h2>C# (Basic)</h2>
+                            <img src="{% static 'certificates/CSharpBasic.png' %}" width="300" height="200" alt="Certificate 7 Image">
+                            <p>C# (Basic) is a certification that proves the knowledge of basic C#.</p>
+                        </li>
+                        <li class="certificate">
+                            <h2>CSS (Basic)</h2>
+                            <img src="{% static 'certificates/CSSBasic.png' %}" width="300" height="200" alt="Certificate 8 Image">
+                            <p>CSS (Basic) is a certification that proves the knowledge of basic CSS.</p>
+                        </li>
+                    </ul>
+                </ul>
+    
+        </main>
+        <footer>
+            <p>&copy; 2024 by Cemal BOLAT</p>
+        </footer>
+    
+        <script>
+            function showSection(sectionId) {
+                const sections = document.querySelectorAll('main > section');
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </body>
+    </html>
