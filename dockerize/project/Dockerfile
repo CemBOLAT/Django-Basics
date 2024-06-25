@@ -4,6 +4,8 @@ FROM python:3.10-slim
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
 
+EXPOSE 8000
+
 # Set working directory
 WORKDIR /code
 
