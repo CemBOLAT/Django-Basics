@@ -8,6 +8,7 @@ python manage.py makemigrations
 
 # Start server
 echo "Starting server"
-python manage.py runserver 0.0.0.0:8000
+daphne -b 0.0.0.0 -p 443 start.asgi:application
+
 
 exec "$@"

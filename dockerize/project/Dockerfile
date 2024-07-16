@@ -18,6 +18,8 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy the rest of the application code to the working directory
 COPY . /code
 
+RUN chmod +x entrypoint.sh
+
 # Expose the port the app runs on
 
 ENTRYPOINT ["./entrypoint.sh"]
