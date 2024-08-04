@@ -22,17 +22,16 @@ Welcome to the Django-Basics project! This is a Django-based application designe
 
 To start the development server, run the following command:
 
-\`\`\`bash
-python authenticator/manage.py runserver
-\`\`\`
-
+```bash
+python manage.py runserver
+```
 ### Using Docker
 
 To start the project using Docker, navigate to the \`dockerize\` directory and run:
 
-\`\`\`bash
+```bash
 docker-compose up --build
-\`\`\`
+```
 
 ## Project Structure Details
 
