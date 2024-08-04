@@ -1,4 +1,4 @@
-# Django-Basics Project
+# Django-Basics
 
 Welcome to the Django-Basics project! This is a Django-based application designed to provide a structured and scalable foundation for building web applications. This README will guide you through the structure of the project, how to set it up, and basic usage instructions.
 
