@@ -11,8 +11,6 @@ Welcome to the Django-Basics project! This is a Django-based application designe
   - [dockerize](#dockerize)
   - [portfolio_start](#portfolio_start)
   - [portfolio_with_bootstrap](#portfolio_with_bootstrap)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Structure
 
@@ -60,11 +58,3 @@ This module is for containerizing the project using Docker.
 - **Makefile**: Contains commands for Docker.
 - **docker-compose.yml**: Docker Compose configuration file.
 - **project**: Contains Docker-specific Django settings and configuration files.
-
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and create a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
